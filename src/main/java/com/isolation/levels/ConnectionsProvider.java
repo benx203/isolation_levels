@@ -10,13 +10,13 @@ import java.sql.SQLException;
  */
 public class ConnectionsProvider {
 
-
     private static final MysqlDataSource DATA_SOURCE = new MysqlDataSource();
 
     static {
         DATA_SOURCE.setPort(3306);
-        DATA_SOURCE.setDatabaseName("sakila");
-        DATA_SOURCE.setUser("sakila_user");
+        DATA_SOURCE.setDatabaseName("test");
+        DATA_SOURCE.setUser("root");
+        DATA_SOURCE.setPassword("123456");
     }
 
     public static Connection getConnection() {

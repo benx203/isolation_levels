@@ -1,6 +1,5 @@
 package com.isolation.levels;
 
-import javax.sql.RowSet;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -12,11 +11,13 @@ import java.util.List;
  */
 public class Utils {
 
-
     public static void printResultSet(ResultSet resultSet) throws SQLException {
+        System.out.println("Results:");
 
-
-
+        if(!resultSet.isBeforeFirst()){
+            System.out.println("There are not result!");
+            return;
+        }
 
         List<String> columnNames= new ArrayList<String>();
 
@@ -40,7 +41,5 @@ public class Utils {
 
             System.out.println("\n==========================================================");
         }
-
-
     }
 }
